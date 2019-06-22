@@ -1,0 +1,6 @@
+[submodule "CS-Frontend"]
+	path = CS-Frontend
+	url = https://github.com/pandreyy99/CS-Frontend.git
+[submodule "CS-Backend"]
+	path = CS-Backend
+	url = https://github.com/pandreyy99/CS-Backend.git
