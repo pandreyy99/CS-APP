@@ -30,7 +30,7 @@ DELETE /product/{id} <br/>
 
 
 
-# csapp-front
+# CS-Frontend
 
 > A Vue.js project
 
