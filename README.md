@@ -21,12 +21,11 @@ You will need php and composer installed on your system.
 
 You can use the following routes:
 
-GET /products <br/>
-GET /product/{id} <br/>
-GET /products/{offset}/{limit} <br/>
-POST /product <br/>
-PUT /product/{id} <br/>
-DELETE /product/{id} <br/>
+GET /items <br/>
+GET /item/{id} <br/>
+POST /item <br/>
+PUT /item/{id} <br/>
+DELETE /item/{id} <br/>
 
 
 
