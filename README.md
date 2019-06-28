@@ -52,13 +52,15 @@ You can run this script in order to find if you have these 3 extensions installe
 
 You can use the following routes:
 
-Get all items - GET /api/items
-Get one item - GET /api/items/{id}
-Create an item - POST /api/items
-Edit an item - PUT /api/items/{id}
-Delete an item - DELETE /api/items/{id}
+Get all items - ***GET /api/items*** <br/>
+Get one item - ***GET /api/items/{id}*** <br/>
+Create an item - ***POST /api/items*** <br/>
+Edit an item - ***PUT /api/items/{id}*** <br/>
+Delete an item - ***DELETE /api/items/{id}*** <br/>
 
+**Note:** *You'll need MySQL. Navigate to the mysql website and install the community server edition. If you are using a Mac, I'll recommend following these instructions. To avoid micromanaging from the terminal, I'll also recommend installing a MySQL GUI, Sequel Pro.*
 
+For detailed information go to [Lumen documentation](https://lumen.laravel.com/docs/5.8).
 
 # CS-Frontend
 
