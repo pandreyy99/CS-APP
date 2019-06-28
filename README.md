@@ -1,17 +1,48 @@
 # CS-APP
 
 # CS-Backend
-A simple backend for CS-APP.
+A simple backend for CS-APP(RESTful API developed with Lumen).
 
 Backend setup (backend directory)
 You will need php and composer installed on your system.
 
+However, if you are not using Homestead, you will need to make sure your server meets the following requirements: <br/>
+
+***PHP >= 7.1.3*** <br/>
+***OpenSSL PHP Extension*** <br/>
+***PDO PHP Extension*** <br/>
+***Mbstring PHP Extension*** <br/>
+
+You can run this script in order to find if you have these 3 extensions installed :
+
+```
+    <?php
+    if(!extension_loaded('openssl')) {
+        throw new Exception('This app needs the Open SSL PHP extension.');
+	}
+    else echo 'Open SSL PHP extension installed!'. PHP_EOL , "<br>";
+
+    if (!defined('PDO::ATTR_DRIVER_NAME')) {
+	    echo 'PDO PHP unavailable';
+	}
+    else echo 'PDO PHP extension installed!'. PHP_EOL , "<br>";
+
+    if (!extension_loaded('mbstring')) { 
+	    echo 'Mbstring PHP extension not found!';
+	}
+    else echo 'Mbstring PHP extension installed!'. PHP_EOL, "<br>";	
+	?>
+```
+
 1. Create a file named .env in the main directory with your database credentials. It should be identical to .env.example file.
-    - Install all the things needed with:
-    ``` composer install ```
+    - Run the following command in your terminal to create a new project with Lumen:
+    ``` composer create-project --prefer-dist laravel/lumen items ```
     
-2. Migrate the table for products to your database with:
-    ``` php artisan migrate ```
+2. Migrate the table for items to your database with:
+    ``` 
+        php artisan make:migration create_items_table
+        php artisan migrate
+    ```
     
 3. Create some random entries with:
     ``` php artisan db:seed ```
@@ -21,11 +52,11 @@ You will need php and composer installed on your system.
 
 You can use the following routes:
 
-GET /items <br/>
-GET /item/{id} <br/>
-POST /item <br/>
-PUT /item/{id} <br/>
-DELETE /item/{id} <br/>
+Get all items - GET /api/items
+Get one item - GET /api/items/{id}
+Create an item - POST /api/items
+Edit an item - PUT /api/items/{id}
+Delete an item - DELETE /api/items/{id}
 
 
 
